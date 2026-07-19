@@ -1,1 +1,17 @@
-test test test
+.navbar {
+    display: flex;  
+    background-color: #00a6f3;  
+    padding: 10px 20px;      
+}
+
+.navbar a {
+    color: rgb(253, 253, 253);    
+    text-decoration: none;    
+    padding: 10px 15px;       
+}
+
+.navbar a:hover {
+    background-color: #555;  
+    color: #4CAF50;          
+    border-radius: 4px;       
+}
