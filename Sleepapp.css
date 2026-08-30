@@ -1,52 +1,412 @@
+/* Reset some default styles */
+* {
+    box-sizing: border-box;
+}
 
+/* Background Color and more important basics for the pages */
+body {
+    background-color: #EBE6E6;
+    margin: 0;
+    padding: 0;
+}
 
+/* Contains the basic padding that all my content inbetween the nav bars will be following */
+.page-content {
+    padding-top: 80px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 80px;
+}
+
+/* Rules for H1 headers to follow */
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* Top Navigation Bar Styles */
 .navbartop {
     display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index : 1000;
     background-color: #00a6f3;
-    padding: 30px;
-    border-bottom: 10px solid #158edf; 
+    border-bottom: 10px solid #158edf;
 }
 
+/* Styles for the text descriptions in the top navigation bar */
 .navbartop a {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     color: rgb(253, 253, 253);
     text-decoration: none;
-    padding: 10px 15px;
+    padding: 10px;
 }
 
-.navbartop  a:hover {
-    background-color: #71a4bb;
-    color: #1e5385;
-    border-radius: 4px;
+/* Styles for the images in the top navigation bar */
+.navbartop img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    transition: transform 0.2s ease;
 }
 
-.time {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 5px;      
-    border: none;
-    background: none;
-
+/* Styles for the hover effect on the images in the top navigation bar */
+.navbartop a:hover img {
+    transform: scale(1.2);
 }
 
+/* Styles for the text labels in the top navigation bar */
+.navbartop span {
+    margin-top: 5px;
+}
+
+/* Bottom Navigation Bar */
 .navbarbottom {
     display: flex;
     position: fixed;
     bottom: 0;
+    left: 0;
     width: 100%;
     background-color: #00a6f3;
-    padding: 30px;
-    border-top: 10px solid #158edf; 
+    border-top: 10px solid #158edf;
 }
 
+/* Styles for the texts in the bottom navigation bar */
 .navbarbottom a {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     color: rgb(253, 253, 253);
     text-decoration: none;
-    padding: 10px 15px;
+    padding: 10px;
 }
 
-.navbarbottom  a:hover {
-    background-color: #71a4bb;
-    color: #1e5385;
+/* Styles for the images in the bottom navigation bar */
+.navbarbottom img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    transition: transform 0.2s ease;
+}
+
+/* Styles for the hover effect on the images in the bottom navigation bar */
+.navbarbottom a:hover img {
+    transform: scale(1.2);
+}
+
+/* Styles for the text labels in the bottom navigation bar */
+.navbarbottom span {
+    margin-top: 5px;
+}
+
+/* Time Selection Button */
+.time {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 100px 0 150px 0;
+}
+
+/* Style for the time selection button */
+.time a {
+    display: flex;
+    flex-direction: column;    
+    align-items: center;
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* Style for the time selection image */
+.time img {
+    width: 220px;
+    height: 220px;
+    transition: transform 0.2s ease;
+}
+
+/* Style for the hover effect on the time selection image */
+.time a:hover img {
+    transform: scale(1.2);
+}
+
+/* Style for the time selection text */
+.time span {
+    margin: 20px 0 0 0;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-size: 32px;
+}
+
+/* Sleep Row Styles */
+.sleep-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 700px;
+    margin: 15px auto;
+    padding: 15px 20px;
+    background-color: white;
     border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    box-sizing: border-box;
+}
+
+/* Style for the spans inside the sleep row first-child */
+.sleep-row span:first-child {
+    min-width: 120px;
+    font-weight: bold;
+}
+
+/* Style for the spans inside the sleep row second-child */
+.sleep-row span:nth-child(2) {
+    min-width: 150px;
+    text-align: center;
+}
+
+/* Style for the spans inside the sleep row third-child */
+.sleep-row span:nth-child(3) {
+    min-width: 140px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Delete Button Styles */
+.delete-button {
+    margin-left: auto;
+    padding: 8px 14px;
+    background-color: #e53935;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+/* Style for the hover effect on the delete buttons */
+.delete-button:hover {
+    background-color: #c62828;
+    transform: scale(1.05);
+}
+
+/* Style for the active state of the delete buttons */
+.delete-button:active {
+    transform: scale(0.98);
+}
+
+/* Personal Information Form Basic Styles */
+.personal-form {
+    width: 90%;
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    box-sizing: border-box;
+}
+
+/* Personal Information Form Row Styles */
+.personal-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Style for the last row in the personal information form */
+.personal-row:last-of-type {
+    border-bottom: none;
+}
+
+/* Style for the labels inside the personal information form */
+.personal-row label {
+    font-weight: bold;
+    flex: 1;
+}
+
+/* Style for the select dropdown inside the personal information form */
+.personal-row select {
+    width: 50%;
+    padding: 9px;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    background-color: white;
+    font-size: 14px;
+}
+
+/* Style for the save button in the personal information form */
+.save-personal-button {
+    display: block;
+    width: 100%;
+    margin-top: 25px;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Style for the hover effect on the save button */
+.save-personal-button:hover {
+    background-color: #3e8e41;
+}
+
+/* Information Page Introduction Styles */
+.information-intro {
+    max-width: 750px;
+    margin: 0 auto 25px auto;
+    text-align: center;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+/* Information Section Styles */
+.information-section {
+    width: 90%;
+    max-width: 750px;
+    margin: 25px auto;
+    padding: 25px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    box-sizing: border-box;
+}
+
+/* Information Section Headings */
+.information-section h2,
+.personalised-section h2 {
+    margin-top: 0;
+    text-align: center;
+}
+
+/* Information Section Paragraphs */
+.information-section > p {
+    line-height: 1.6;
+}
+
+/* 10-3-2-1-0 Rule */
+.sleep-rule {
+    margin-top: 20px;
+}
+
+/* 10-3-2-1-0 Sleep Tip Styles */
+.sleep-tip {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Style for the last sleep tip to stop border chain */
+.sleep-tip:last-child {
+    border-bottom: none;
+}
+
+/* Style for the sleep number containers within each sleep tip */
+.sleep-number {
+    min-width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #222;
+    color: white;
+    border-radius: 50%;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Sleep Tip Heading styles */
+.sleep-tip h3 {
+    margin: 0 0 5px 0;
+}
+
+/* Sleep Tip Paragraph styles */
+.sleep-tip p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Other Recommendations Rules */
+.recommendation {
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Style for the last recommendation to stop border chain */
+.recommendation:last-child {
+    border-bottom: none;
+}
+
+/* Other Recommendations Rules */
+.recommendation h3 {
+    margin: 0 0 6px 0;
+}
+
+/* Other Recommendations Paragraph Styles */
+.recommendation p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Personalised Recommendation Styles */
+.personalised-section {
+    width: 90%;
+    max-width: 750px;
+    margin: 25px auto;
+    padding: 25px;
+    background-color: #f2f2f2;
+    border-radius: 12px;
+    border: 2px solid #ddd;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* Personalised Recommendation Paragraph Styles */
+.personalised-section p {
+    line-height: 1.6;
+}
+
+/* Personalised Recommendation Button Styles */
+.personalised-button {
+    margin-top: 10px;
+    padding: 12px 20px;
+    background-color: #222;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Personalised Recommendation Button Hover Styles */
+.personalised-button:hover {
+    background-color: #444;
+}
+
+/* Sleep Concerns */
+.sleep-concerns {
+    margin-bottom: 30px;
 }
