@@ -3,23 +3,55 @@
 <head>  
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>SleepApp</title>
     <link rel="stylesheet" href="Sleepapp.css">
+    <script src="Sleepapp.js" defer></script>
 </head>
 <body>
 
+<!-- Top Navigation Bar -->
 <nav class="navbartop">
-    <a href="#back">Back</a>
-    <a href="#home">Home</a>
-    <a href="#settings">Settings</a>
+    <a href="javascript:history.back()">
+        <img src="images/back.png" alt="Back">
+        <span>Back</span>
+    </a>
+    <a href="Sleepapp.html">
+        <img src="images/home.png" alt="Home">
+        <span>Home</span>
+    </a>
+    <a href="Settings.html">
+        <img src="images/settings.png" alt="Settings">
+        <span>Settings</span>
+    </a>
 </nav>
 
-<div class="time"> <button> <img src="images/clock.png" alt="Button"> </button> 
+<!-- Put all page content to give padding away from edges and nav bar -->
+<div class="page-content">
+    <!-- Time Selection Section -->
+    <div class="time">
+        <a href="SleepSelecter.html">
+            <img src="images/clock.png" alt="Button">
+            <span>Select Time</span>
+        </a>
+    </div>
 </div>
+
+<!-- Bottom Navigation Bar -->
 <nav class="navbarbottom">
-    <a href="#information">Information</a>
-    <a href="#personal">Personal</a>
-    <a href="#history">History</a>
+    <a href="Information.html">
+        <img src="images/information.png" alt="Information">
+        <span>Information</span>
+    </a>
+    <a href="Personal.html">
+        <img src="images/personal.png" alt="Personal">
+        <span>Personal</span>
+    </a>
+    <a href="History.html">
+        <img src="images/history.png" alt="History">
+        <span>History</span>
+    </a>
 </nav>
+
 </body>
+
 </html>

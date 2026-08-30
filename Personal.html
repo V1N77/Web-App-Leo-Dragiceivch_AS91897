@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal</title>
+    <link rel="stylesheet" href="Sleepapp.css">
+    <script src="Sleepapp.js" defer></script>
+</head>
+<body>
+
+<!-- Top Navigation Bar -->
+<nav class="navbartop">
+    <a href="javascript:history.back()">
+        <img src="images/back.png" alt="Back">
+        <span>Back</span>
+    </a>
+    <a href="Sleepapp.html">
+        <img src="images/home.png" alt="Home">
+        <span>Home</span>
+    </a>
+    <a href="Settings.html">
+        <img src="images/settings.png" alt="Settings">
+        <span>Settings</span>
+    </a>
+</nav>
+
+<!-- Put all page content to give padding away from edges and nav bar -->
+<div class="page-content">
+
+    <!-- Personal Information Form -->
+    <h1>Personal Information</h1>
+    <div class="personal-form">
+
+        <!-- Age Selection -->
+        <div class="personal-row">
+            <label for="Age">Age:</label>
+            <select id="Age">
+                <option value="">Select age</option>
+                <option value="13-17">13-17</option>
+                <option value="18-25">18-25</option>
+                <option value="26-40">26-40</option>
+                <option value="41-60">41-60</option>
+                <option value="61+">61+</option>
+            </select>
+        </div>
+
+        <!-- Employment Status -->
+        <div class="personal-row">
+            <label for="Employment">Employment:</label>
+            <select id="Employment">
+                <option value="">Select employment</option>
+                <option value="Student">Student</option>
+                <option value="Full-time">Full-time</option>
+                <option value="Part-time">Part-time</option>
+                <option value="Unemployed">Unemployed</option>
+                <option value="Retired">Retired</option>
+            </select>
+        </div>
+
+        <!-- Daily Schedule -->
+        <div class="personal-row">
+            <label for="Schedule">Daily Schedule:</label>
+            <select id="Schedule">
+                <option value="">Select schedule</option>
+                <option value="Regular">Regular</option>
+                <option value="Somewhat irregular">Somewhat irregular</option>
+                <option value="Very irregular">Very irregular</option>
+            </select>
+        </div>
+
+        <!-- Daily Activity -->
+        <div class="personal-row">
+            <label for="Activity">Daily Activity:</label>
+            <select id="Activity">
+                <option value="">Select activity level</option>
+                <option value="Low">Low</option>
+                <option value="Moderate">Moderate</option>
+                <option value="High">High</option>
+            </select>
+        </div>
+
+        <!-- School/Work Start Time -->
+        <div class="personal-row">
+            <label for="SchoolWork">School / Work Start:</label>
+            <select id="SchoolWork">
+                <option value="">Select time</option>
+                <option value="Before 7 AM">Before 7 AM</option>
+                <option value="7-8 AM">7-8 AM</option>
+                <option value="8-9 AM">8-9 AM</option>
+                <option value="After 9 AM">After 9 AM</option>
+            </select>
+        </div>
+
+        <!-- Sleep Environment -->
+        <div class="personal-row">
+            <label for="SleepEnvironment">Sleep Environment:</label>
+            <select id="SleepEnvironment">
+                <option value="">Select environment</option>
+                <option value="Quiet">Quiet</option>
+                <option value="Sometimes noisy">Sometimes noisy</option>
+                <option value="Often noisy">Often noisy</option>
+            </select>
+        </div>
+
+        <!-- Usual Sleep Quality -->
+        <div class="personal-row">
+            <label for="SleepQuality">Usual Sleep Quality:</label>
+            <select id="SleepQuality">
+                <option value="">Select quality</option>
+                <option value="Good">Good</option>
+                <option value="Average">Average</option>
+                <option value="Poor">Poor</option>
+            </select>
+        </div>
+
+        <!-- Save Button -->
+        <button class="save-personal-button" onclick="SavePersonalInformation()">
+            Save Information
+        </button>
+    </div>
+</div>
+
+
+<!-- Bottom Navigation Bar -->
+<nav class="navbarbottom">
+    <a href="Information.html">
+        <img src="images/information.png" alt="Information">
+        <span>Information</span>
+    </a>
+    <a href="Personal.html">
+        <img src="images/personal.png" alt="Personal">
+        <span>Personal</span>
+    </a>
+    <a href="History.html">
+        <img src="images/history.png" alt="History">
+        <span>History</span>
+    </a>
+</nav>
+
+</body>
+
+</html>
